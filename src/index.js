@@ -24,6 +24,7 @@ let cli = function () {
                 break;
 
             case 'ADD':
+                add(userInput,key);
                 break;
 
             case 'REMOVE':
@@ -94,8 +95,31 @@ function members(userInput,key){
     }
 }
 
+function add(userInput,key){
+    memberArray = dictionary.get(key);
+    if (userInput.length !== 3) {
+        console.log('ERROR: Input must include command, and one key-member pair');
+    }
+
+    if (!dictionary.has(key)) {
+        dictionary.set(key, [userInput[2]]);
+        console.log('Added');
+    }
+    else {
+        if (memberArray.indexOf(userInput[2]) === -1) {
+            memberArray.push(userInput[2]);
+            dictionary.set(key, memberArray);
+            console.log('Added');
+        }
+        else {
+            console.log('ERROR, member already exists for key');
+        }
+    }
+}
+
 module.exports = {
     cli,
     keys,
-    members
+    members,
+    add
 }
