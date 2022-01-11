@@ -44,11 +44,16 @@ let cli = function () {
             case 'I':
                 console.log('KEYS, MEMBERS, ADD, REMOVE, REMOVEALL, CLEAR, KEYEXISTS, MEMBEREXISTS, ALLMEMBERS, ITEMS, EXIT', 'I')
                 break;
-                default: 
-                    console.log('Invalid Command');
+            case 'EXIT':
+                readlineInterface.close();
+                return true;
+            default:
+                console.log('Invalid Command');
+
 
 
         }
+        cli();
     })
 }
 
