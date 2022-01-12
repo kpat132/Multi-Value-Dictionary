@@ -217,6 +217,13 @@ Example:
 3) bang: bar
 4) bang: baz
 ```
+### INFO
+Returns all possible commands
+```
+>I
+'KEYS, MEMBERS, ADD, REMOVE, REMOVEALL, CLEAR, KEYEXISTS, MEMBEREXISTS, ALLMEMBERS, ITEMS, EXIT', 'I'
+```
+
 ## EXIT
 Exits the application.
 
