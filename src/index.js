@@ -212,6 +212,7 @@ function items(userInput){
         for (let [key, value] of dictionary.entries()) {
             value.forEach(element => {
                 console.log(`${count}) ${key} : ${element}`)
+                count++;
             });
 
         }
