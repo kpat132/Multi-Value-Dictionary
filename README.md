@@ -3,7 +3,7 @@ A CLI application that stores a multi-value dictionary in memory.
 
 
 ## Getting Started
-To start, clone the repo and build the project using: 
+To start, clone the repo and switch to master branch. Build the project using: 
 ```
 npm install
 ```
